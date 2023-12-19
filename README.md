@@ -16,7 +16,7 @@
 ├─out                                             // 输出链接文件（应该没用）
 │  └─production
 │      └─Java work3                               
-└─src
+├─src
 │  ├─Goods                                        // 商品类
 │  ├─Order                                        // 订单类
 │  ├─JDBCUtil                                     // 数据库操作类
