@@ -1,8 +1,30 @@
 # 项目结构
 
-项目构建系统为常规的Intellij。源代码位于src文件夹下，其中Test.java用于测试，JDBCUtil.java与数据库操作有关，Goods.java存放Goods（商品）类的内部实现，Order.java存放Order（订单）类的内部实现。主函数在Test.java中，**程序应当从Test.java编译、启动。**
+项目构建系统为常规的Intellij。目录树如下：
 
-项目所依赖的库放在lib文件夹中，并已成功在项目中添加为库。
+```
+├─.idea                                           // 应该是IDEA自身的配置文件夹（不知道有没有用）
+│  ├─dataSources
+│  │  └─f4bcde30-d9a2-4413-af95-c4826347fec1
+│  │      └─storage_v2
+│  │          └─_src_
+│  │              └─schema
+│  └─libraries
+├─lib
+│  ├─gson-2.10.1.jar                              // 用于 json 与内置类型的转换
+│  └─mysql-connector-j-8.0.33.jar                 // JDBC 连接库
+├─out                                             // 输出链接文件（应该没用）
+│  └─production
+│      └─Java work3                               
+└─src
+│  ├─Goods                                        // 商品类
+│  ├─Order                                        // 订单类
+│  ├─JDBCUtil                                     // 数据库操作类
+│  └─Test                                         // 测试文件，包含测试数据
+└─Java work3.iml                                  // IntelliJ 项目配置文件
+```
+
+（说明：程序应当从Test.java编译、启动。项目所依赖的库放在lib文件夹中，并已成功在项目中添加为库。）
 
 # 实现功能
 
