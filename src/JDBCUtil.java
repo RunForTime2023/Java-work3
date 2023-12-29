@@ -385,6 +385,8 @@ public final class JDBCUtil {
             if (RESULTSET.next()) {
                 //核查订单中是否有不存在的商品
                 boolean exist;
+                COMMAND = CONNECTION.prepareStatement("select `id` from `goodslist`", ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                RESULTSET = COMMAND.executeQuery();
                 for (Goods entry : order.getGoodsList().keySet()) {
                     exist = false;
                     while (RESULTSET.next()) {
@@ -392,7 +394,7 @@ public final class JDBCUtil {
                             exist = true;
                             break;
                         }
-                    }
+                    };
                     if (!exist) {
                         System.out.println("更新失败，采购清单中包含不存在的商品！");
                         return;
